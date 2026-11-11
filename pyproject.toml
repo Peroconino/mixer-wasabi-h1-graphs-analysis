@@ -1,0 +1,24 @@
+[project]
+name = "mixer-wasabi-h1-graph"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "peroconino", email = "leandrofontellas@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "networkx>=3.7",
+    "requests>=2.34.2",
+]
+
+[project.scripts]
+mixer-wasabi-h1-graph = "mixer_wasabi_h1_graph:main"
+count-input-addresses = "mixer_wasabi_h1_graph.count_input_addresses:main"
+fetch-history = "mixer_wasabi_h1_graph.fetch_history:main"
+build-graph = "mixer_wasabi_h1_graph.build_graphs:main"
+
+[build-system]
+requires = ["uv_build>=0.12.18,<0.13.0"]
+build-backend = "uv_build"
